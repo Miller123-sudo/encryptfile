@@ -1,0 +1,44 @@
+extends base
+
+block content
+    .container-fluid 
+        p= file
+        p= path
+        if msg
+            .msg_container
+                p.bg-warning.p-2= msg
+        //- p= `${path}\${file}`
+        <div class="container-fluid mb-4 text-center" >
+            img(src="https://miro.medium.com/max/1000/1*yFzcbxwGGAmT9M6lIuPKXg.jpeg", style ="height:140px")
+        </div>
+
+        <form method='post', enctype='multipart/form-data', action='/'>
+            <div class="form-group">
+                p.text-center.text-uppercase.p-1.mb-1.bg-success.text-white.color Choose a file to encrypt
+
+                input(class="form-control" type="file" id="ctrl" name='files' required multiple)
+            </div>
+            button.btn.btn-primary.mt-4(type="submit") Encrypt
+            //- <button type="submit" class="btn btn-primary mt-4">Encrypt</button>
+        </form>
+        a(href= '/download' class="btn btn-primary mt-4 b") Download encrypt file
+
+        <form method='post', enctype='multipart/form-data', action='/decrypt'>
+            <div class="form-group">
+                p.text-center.text-uppercase.p-1.mb-1.bg-success.text-white.color Choose a file to decrypt
+
+                input(class="form-control" type="file" id="ctrl" name='files' required )
+            </div>
+            button.btn.btn-primary.mt-4(type="submit") Decrypt
+            //- <button type="submit" class="btn btn-primary mt-4">Encrypt</button>
+        </form>
+
+        //- if encrypt_btn_show
+        
+        //- if decrypt_btn_show
+        a(href= '/download' class="btn btn-primary mt-4") Download decrypt file
+        
+
+        
+
+        

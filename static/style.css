@@ -1,0 +1,16 @@
+.color {
+  color: red;
+}
+.b {
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+.msg_container {
+  display: flex;
+  height: 49px;
+  width: 90vw;
+}
+.img {
+  height: 30px;
+  width: 30px;
+}
